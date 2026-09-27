@@ -1,0 +1,62 @@
+generated: '2026-09-27'
+method: probed
+generator: harvest-well-known.py
+source: Live GET of the named /.well-known/ path list on every host the record knows; every row is a request that
+  was issued.
+summary:
+  hosts_probed: 1
+  paths_probed: 11
+  documents_served: 2
+hosts:
+- host: barcodeapi.org
+  control:
+    path: /.well-known/apis-io-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 930
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    standard: RFC 9116
+    note: '200 but no Contact: field: not an RFC 9116 document'
+  - path: /.well-known/openid-configuration
+    status: 200
+    standard: OpenID Connect Discovery 1.0
+    note: 200 but the body is not the document this path names
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    standard: RFC 8414
+    note: 200 but the body is not the document this path names
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    standard: RFC 9728
+    note: 200 but the body is not the document this path names
+  - path: /.well-known/api-catalog
+    status: 200
+    standard: RFC 9727
+    note: 200 but the body is not the document this path names
+  - path: /.well-known/apis.json
+    status: 200
+    standard: APIs.json
+    note: 200 but the body is not the document this path names
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    standard: OpenAI plugin manifest
+    note: 200 but the body is not the document this path names
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    standard: AAuth
+    note: 200 but the body is not the document this path names
+  - path: /.well-known/ucp.json
+    status: 200
+    standard: UCP
+    content_type: application/json;charset=utf-8
+    file: barcode-ucp.json
+  - path: /.well-known/acp.json
+    status: 200
+    standard: ACP
+    content_type: application/json;charset=utf-8
+    file: barcode-acp.json
+  - path: /.well-known/mcp/server-card.json
+    status: 200
+    standard: MCP server card
+    note: 200 but the body is not the document this path names

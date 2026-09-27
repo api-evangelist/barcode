@@ -35,6 +35,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- type: Vendors
+  url: vendors/barcode-vendors.yml
 - type: WellKnown
   url: well-known/barcode-well-known.yml
 - type: Hosts
